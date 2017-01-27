@@ -1,0 +1,43 @@
+// include foundation
+
+@import "../node_modules/foundation-sites/scss/foundation";
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+body {
+  background-image: url('/Users/mariamqasim/Desktop/tiy/angular/critic/images/movieseats.jpg');
+  border: 12px solid maroon;
+  color: beige;
+  padding: 20px;
+  margin: 20px;
+  font-family: 'Padauk', sans-serif;
+    h1 {
+      @include grid-row();
+      text-align: center;
+    }
+  .movieul {
+    @include grid-row();
+    margin-top: 40px;
+    width: 100%;
+    .each {
+      @include grid-column(4);
+      border: 4px solid beige;
+      margin-top: 20px;
+      background-color: white;
+      list-style: none;
+      color: black;
+    }
+    .rating {
+      @include grid-column(8);
+      display: flex;
+      text-align: center;
+    }
+    .rating p {
+      font-size: 20px;
+    }
+    .highlighted {
+      color: yellow;
+    }
+  }
+}
